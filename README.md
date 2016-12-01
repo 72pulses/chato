@@ -9,6 +9,7 @@
   database configurations
   * copy config/secrets.yml.example to config/secrets.yml. In production environment, create a new secret key
   * copy config/cable.yml.example to config/cable.yml and provide your configurations
+  copy config/config.yml.example to config/config.yml and provide your configurations
   * run - bundle install
 
 * Database creation
