@@ -15,14 +15,12 @@ Things you may want to cover:
   database configurations
   copy config/secrets.yml.example to config/secrets.yml.
   In production environment, create a new secret key
-* Database creation
 
+* Database creation
+  bundle exec rake db:create
+  For production: RAILS_ENV=production bundle exec rake db:create
 * Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Test suite
+  Testing Framework - Rspec Rails
+  To Run Test suite - rspec .
