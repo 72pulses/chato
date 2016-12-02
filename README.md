@@ -1,5 +1,7 @@
 # README
 
+[![CircleCI](https://circleci.com/gh/72pulses/chato.svg?style=svg)](https://circleci.com/gh/72pulses/chato)
+
 * Ruby version - 2.3.0
 * Rails version - 5.0.0
 * System dependencies

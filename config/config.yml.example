@@ -1,8 +1,0 @@
-development:
-  external_access_token:
-
-test:
-  external_access_token:
-
-production:
- external_access_token:

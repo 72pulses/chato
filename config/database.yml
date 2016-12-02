@@ -1,9 +1,9 @@
 default: &default
-  adapter: pg
+  adapter: postgresql
   pool: 5
-  username:
-  password:
-  encoding: utf8
+  username: <%= ENV['DATABASE_USER_NAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  encoding: unicode
 
 development:
   <<: *default

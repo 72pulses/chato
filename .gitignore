@@ -20,8 +20,5 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-# Ignore configuration settings
-config/database.yml
-config/secrets.yml
-config/cable.yml
-config/config.yml
+# Ignoring .env file
+.env.local
