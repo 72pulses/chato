@@ -4,7 +4,7 @@ module Apis
   #
   # @author [aby]
   #
-  class UsersController < Apis::ApplicationController
+  class UsersController < Apis::BaseApiController
     def create
       @user = User.create(user_params)
       @message = if @user.errors.any?
