@@ -2,7 +2,7 @@ module Apis
   #
   # Controller for User related actions
   #
-  # @author [aby]
+  # @author aby
   #
   class UsersController < Apis::BaseApiController
     def create
