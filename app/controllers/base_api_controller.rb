@@ -1,7 +1,7 @@
 #
 # Base Controller for APIs
 #
-# @author [aby]
+# @author aby
 #
 class BaseApiController < ApplicationController
   before_action :initialize_default_instance_vars,
