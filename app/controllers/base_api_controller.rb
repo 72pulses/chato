@@ -21,7 +21,7 @@ class BaseApiController < ApplicationController
 
   def authenticate_token
     authenticate_with_http_token do |token, _options|
-      render_unauthorized unless token == APP_CONFIG['external_access_token']
+      token == APP_CONFIG['external_access_token'] ? true : render_unauthorized
     end
   end
 
