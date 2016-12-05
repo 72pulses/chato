@@ -1,18 +1,18 @@
 AllCops:
-  RunRailsCops: true
+  Rails: true
   Excludes:
-    - db/*/*
-    - db/schema.rb
-    - config/*/*
-    - config/*.rb
-    - script/**
-    - bin/*
-    - Rakefile
-    - spec/spec_helper.rb
-    - spec/rails_helper.rb
-    - Gemfile
-    - Gemfile.lock
-    - config.ru
+    - 'db/*/*'
+    - 'db/schema.rb'
+    - 'config/*/*'
+    - 'config/*.rb'
+    - 'script/**'
+    - 'bin/*'
+    - 'Rakefile'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - 'config.ru'
 Metrics/ClassLength:
   CountComments: false
   Max: 200
@@ -24,3 +24,5 @@ Metrics/MethodLength:
   Max: 20
 Metrics/LineLength:
   Max: 120
+Style/FrozenStringLiteralComment:
+  Enabled: false
