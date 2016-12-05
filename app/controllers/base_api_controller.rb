@@ -1,7 +1,7 @@
 #
 # Base Controller for APIs
 #
-# @author [aby]
+# @author aby
 #
 class BaseApiController < ApplicationController
   before_action :initialize_default_instance_vars,
@@ -21,7 +21,7 @@ class BaseApiController < ApplicationController
 
   def authenticate_token
     authenticate_with_http_token do |token, _options|
-      render_unauthorized unless token == APP_CONFIG['external_access_token']
+      token == ENV['EXTERNAL_ACCESS_TOKEN'] ? true : render_unauthorized
     end
   end
 
