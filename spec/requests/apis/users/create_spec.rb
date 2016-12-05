@@ -5,7 +5,7 @@ RSpec.describe 'user creation', type: :request do
     post '/apis/users.json',
          params: { user: { email: 'test@test.com', username: 'test' } },
          headers: { 'Authorization' =>
-                    "Token token=#{APP_CONFIG['external_access_token']}" }
+                    "Token token=#{ENV['EXTERNAL_ACCESS_TOKEN']}" }
     parsed_response = JSON.parse(response.body)
     expect(parsed_response['success']).to eq(true)
   end
