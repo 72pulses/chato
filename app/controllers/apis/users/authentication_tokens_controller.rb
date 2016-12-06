@@ -5,7 +5,7 @@ module Apis
     #
     # @author aby
     #
-    class AuthenticationTokensController < Apis::Users::BaseApiController
+    class AuthenticationTokensController < BaseApiController
       before_action :set_user, only: [:show, :update]
 
       def show

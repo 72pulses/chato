@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'user creation', type: :request do
   it 'successfully creates an user' do
     post '/apis/users.json',
-         params: { user: { email: 'test@test.com', username: 'test' } },
+         params: { user: { email: Faker::Internet.email, username: Faker::Name.name } },
          headers: { 'Authorization' =>
                     "Token token=#{ENV['EXTERNAL_ACCESS_TOKEN']}" }
     parsed_response = JSON.parse(response.body)
