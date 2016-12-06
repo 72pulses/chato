@@ -6,7 +6,7 @@
 # @author aby
 #
 class User < ApplicationRecord
-  validates :email, :username, uniqueness: true
+  validates :email, uniqueness: true
 
   has_secure_token :uuid
   has_secure_token :authentication_token
