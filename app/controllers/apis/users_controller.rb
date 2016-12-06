@@ -4,14 +4,14 @@ module Apis
   #
   # @author aby
   #
-  class UsersController < Apis::BaseApiController
+  class UsersController < BaseApiController
     def create
       @user = User.create(user_params)
       @message = if @user.errors.any?
                    @success = false
                    @user.errors.full_messages.join(',')
                  else
-                   @message = I18n.t('user.created')
+                   I18n.t('user.created')
                  end
     end
 
