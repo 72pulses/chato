@@ -21,5 +21,8 @@
 en:
   user:
     created: 'User created successfully.'
+    signin: 'User authorized successfully.'
+    signout: 'User signed out successfully.'
   session:
     invalid_token: 'Invalid access token'
+  unauthorized_access: 'Unauthorized access.'

@@ -11,7 +11,7 @@ module Apis
                    @success = false
                    @user.errors.full_messages.join(',')
                  else
-                   @message = I18n.t('user.created')
+                   I18n.t('user.created')
                  end
     end
 
