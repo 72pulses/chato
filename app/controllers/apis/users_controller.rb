@@ -6,12 +6,13 @@ module Apis
   #
   class UsersController < BaseApiController
     def create
-      @user = User.create(user_params)
-      @message = if @user.errors.any?
+      @user = User.new(user_params)
+      @user.add_role :chat_user
+      @message = if @user.save
+                   I18n.t('user.created')
+                 else
                    @success = false
                    @user.errors.full_messages.join(',')
-                 else
-                   I18n.t('user.created')
                  end
     end
 
