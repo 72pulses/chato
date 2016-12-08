@@ -6,7 +6,7 @@
 class BaseApiController < ApplicationController
   before_action :initialize_default_instance_vars,
                 :authenticate_app_from_token
-  skip_before_filter :authenticate_user!
+  skip_before_action :authenticate_user!
 
   private
 
