@@ -1,4 +1,4 @@
-module Apis
+module Api
   #
   # Controller for User related actions
   #

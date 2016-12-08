@@ -1,4 +1,4 @@
-module Apis
+module Api
   module Users
     #
     # Controller for User Authentication related actions

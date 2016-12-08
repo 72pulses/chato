@@ -4,7 +4,7 @@ RSpec.describe 'user creation', type: :request do
   let(:user) { FactoryGirl.create(:user) }
 
   it 'successfully creates an user' do
-    post '/apis/users.json',
+    post '/api/users.json',
          params: { user: { email: Faker::Internet.email, username: Faker::Name.name } },
          headers: header_auth_token
     parsed_response = JSON.parse(response.body)
@@ -12,7 +12,7 @@ RSpec.describe 'user creation', type: :request do
   end
 
   it 'should not creates an user' do
-    post '/apis/users.json',
+    post '/api/users.json',
          params: { user: { email: user.email, username: user.username } },
          headers: header_auth_token
     parsed_response = JSON.parse(response.body)

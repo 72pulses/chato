@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   resources :dashboard, only: [:index]
 
-  namespace :apis do
+  namespace :api do
     resources :users
 
     namespace :users do
