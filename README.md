@@ -26,3 +26,5 @@
 * Test suite
   * Testing Framework - Rspec Rails
   * To Run Test suite - rspec .
+
+Find Logo/Icon from here link https://www.iconfinder.com/icons/1326121/chat_discutions_messages_icon
