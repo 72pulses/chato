@@ -10,12 +10,9 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <% if current_user %>
-      <%= nav_bar fixed: :top, brand: 'Chato' do %>
-        <%= menu_group do %>
+    <%= nav_bar fixed: :top, brand: 'Chato' do %>
+      <%= menu_group do %>
+        <% if user_signed_in? %>
           <%= menu_item 'Users', users_path %>
           <%= drop_down current_user.email do %>
             <%= menu_item 'Logout', destroy_user_session_path, method: :delete %>
@@ -23,6 +20,10 @@
         <% end %>
       <% end %>
     <% end %>
-    <%= yield %>
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
   </body>
 </html>
