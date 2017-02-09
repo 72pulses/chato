@@ -9,11 +9,16 @@ function buildChatoIframe(src) {
 }
 
 chatoEvents = {
-  loadChatWindow: function() {
-    var url = chatoBaseUrl + '/api/chat_windows';
+  loadChatWindow: function(chat_div_id) {
+    var url = chatoBaseUrl + '/apis/chat_windows';
     var data = 'currentUserUuid=abc123&participantUuids=xysz';
     var iframe = buildChatoIframe(url + '?' + data);
     req.open('GET', url, false);
+    if (chat_div_id == undefined) {
+      var div_element = document.body; 
+    } else {
+      var div_element = document.getElementById(chat_div_id);
+    }
     req.onload = () => req.status === 200 ? document.body.appendChild(iframe) : console.log(req.statusText);
     req.onerror = (e) => reject(Error(`Network Error: ${e}`));
     req.send(data);

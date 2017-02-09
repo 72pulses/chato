@@ -18,6 +18,11 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  user:
+    created: 'User created successfully.'
+    signin: 'User authorized successfully.'
+    signout: 'User signed out successfully.'
+  session:
+    invalid_token: 'Invalid access token'
+  unauthorized_access: 'Unauthorized access.'
